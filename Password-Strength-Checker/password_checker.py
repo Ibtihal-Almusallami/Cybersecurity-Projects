@@ -29,13 +29,13 @@ for letter in password:
     if letter.isupper():
         has_upper = True
 
-    elif letter.islower():
+    if letter.islower():
         has_lower = True
 
-    elif letter.isdigit():
+    if letter.isdigit():
         has_number = True
 
-    elif letter in special_characters:
+    if letter in special_characters:
         has_special = True
 
 # Check uppercase
