@@ -32,3 +32,15 @@ if has_lower:
     print("✅ Password contains a lowercase letter.")
 else:
     print("❌ Password needs a lowercase letter.")
+
+has_number = False
+
+for letter in password:
+    if letter.isdigit():
+        has_number = True
+        break
+
+if has_number:
+    print("✅ Password contains a number.")
+else:
+    print("❌ Password needs a number.")
