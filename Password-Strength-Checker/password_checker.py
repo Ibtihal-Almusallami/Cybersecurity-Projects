@@ -14,58 +14,52 @@ if len(password) >= 8:
 else:
     print("❌ Your password must be at least 8 characters long.")
 
-# Check for uppercase letter
+# Variables to track password requirements
 has_upper = False
+has_lower = False
+has_number = False
+has_special = False
 
+# Special characters
+special_characters = "!@#$%^&*()-_=+[]{}|\\:;\"'<>,.?/"
+
+# Check everything in ONE loop
 for letter in password:
+
     if letter.isupper():
         has_upper = True
-        break
 
+    elif letter.islower():
+        has_lower = True
+
+    elif letter.isdigit():
+        has_number = True
+
+    elif letter in special_characters:
+        has_special = True
+
+# Check uppercase
 if has_upper:
     score += 1
     print("✅ Password contains an uppercase letter.")
 else:
     print("❌ Password needs an uppercase letter.")
 
-# Check for lowercase letter
-has_lower = False
-
-for letter in password:
-    if letter.islower():
-        has_lower = True
-        break
-
+# Check lowercase
 if has_lower:
     score += 1
     print("✅ Password contains a lowercase letter.")
 else:
     print("❌ Password needs a lowercase letter.")
 
-# Check for a number
-has_number = False
-
-for letter in password:
-    if letter.isdigit():
-        has_number = True
-        break
-
+# Check number
 if has_number:
     score += 1
     print("✅ Password contains a number.")
 else:
     print("❌ Password needs a number.")
 
-# Check for a special character
-special_characters = "!@#$%^&*()-_=+[]{}|\\:;\"'<>,.?/"
-
-has_special = False
-
-for letter in password:
-    if letter in special_characters:
-        has_special = True
-        break
-
+# Check special character
 if has_special:
     score += 1
     print("✅ Password contains a special character.")
