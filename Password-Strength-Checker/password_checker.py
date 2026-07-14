@@ -14,8 +14,21 @@ has_upper = False
 for letter in password:
     if letter.isupper():
         has_upper = True
+        break
 
 if has_upper:
     print("✅ Password contains an uppercase letter.")
 else:
     print("❌ Password needs an uppercase letter.")
+
+has_lower = False
+
+for letter in password:
+    if letter.islower():
+        has_lower = True
+        break
+
+if has_lower:
+    print("✅ Password contains a lowercase letter.")
+else:
+    print("❌ Password needs a lowercase letter.")
