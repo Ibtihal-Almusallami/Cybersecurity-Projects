@@ -8,3 +8,11 @@ choice = input("Encrypt or Decrypt? ").lower()
 print("Choice:", choice)
 print("Message:", message)
 print("Shift:", shift)
+
+result = ""
+
+for char in message:
+    if char.isalpha():
+        print("Letter found:", char)
+    else:
+        result += char
