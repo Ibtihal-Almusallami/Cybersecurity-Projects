@@ -1,5 +1,6 @@
 # Caesar Cipher Encryptor/Decryptor
 # Cybersecurity Project #2
+
 message = input("Enter a message: ")
 shift = int(input("Enter shift value: "))
 
@@ -13,6 +14,9 @@ result = ""
 
 for char in message:
     if char.isalpha():
-        print("Letter found:", char)
+        new_char = chr(ord(char) + shift)
+        result += new_char
     else:
         result += char
+
+print("Result:", result)
