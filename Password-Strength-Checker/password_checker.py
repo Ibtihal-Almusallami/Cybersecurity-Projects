@@ -99,24 +99,3 @@ if not has_special:
 if score == 5:
     print("🎉 Excellent! Your password meets all the requirements.")
 
-# Tell the user what is missing
-print("\nSuggestions to improve your password:")
-
-if len(password) < 8:
-    print("• Make it at least 8 characters long.")
-
-if not has_upper:
-    print("• Add at least one uppercase letter (A-Z).")
-
-if not has_lower:
-    print("• Add at least one lowercase letter (a-z).")
-
-if not has_number:
-    print("• Add at least one number (0-9).")
-
-if not has_special:
-    print("• Add at least one special character (!@#$...).")
-
-# If nothing is missing
-if score == 5:
-    print("🎉 Excellent! Your password is strong and meets all the requirements.")
