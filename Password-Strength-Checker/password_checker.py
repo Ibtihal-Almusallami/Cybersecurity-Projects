@@ -44,3 +44,17 @@ if has_number:
     print("✅ Password contains a number.")
 else:
     print("❌ Password needs a number.")
+
+special_characters = "!@#$%^&*()-_=+[]{}|\\:;\"'<>,.?/"
+
+has_special = False
+
+for letter in password:
+    if letter in special_characters:
+        has_special = True
+        break
+
+if has_special:
+    print("✅ Password contains a special character.")
+else:
+    print("❌ Password needs a special character.")
